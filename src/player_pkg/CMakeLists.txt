@@ -46,3 +46,15 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 
 
 ament_package()
+# 编译TestNode节点（对应src/test_node.cpp）
+add_executable(TestNode
+  src/test_node.cpp
+)
+# 链接依赖库
+target_link_libraries(TestNode
+  ${catkin_LIBRARIES}  # ROS2为${rclcpp_LIBRARIES} + 其他依赖（如OpenCV）
+)
+# 安装节点到ROS2的bin目录（使ros2 run能找到）
+install(TARGETS TestNode
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)

@@ -2,7 +2,7 @@
 <sdf version="1.7">
 	<model name="armor_red_4">
 		<static>false</static>
-		<pose>0.0 0.0 0.0 0 0 3.14</pose>
+		<pose>0.0 0.0 0.0 0 0 -1.57</pose>
 		<gravity>false</gravity>
 		<link name="armor">
 			<gravity>false</gravity>
